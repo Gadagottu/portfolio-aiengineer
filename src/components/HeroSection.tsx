@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Download, FolderOpen } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/image-important1.png";
 import resumePDF from "@/assets/chandrasekhar@ai_enginner.pdf";
 
-const titles = ["Machine Learning", "NLP", "AI Systems", "Voice AI", "Automation"];
+const titles = ["Agentic AI", "LLM Engineering", "RAG Systems", "Generative AI", "Model Context Protocol (MCP)"];
 
 const HeroSection = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -109,7 +109,7 @@ const HeroSection = () => {
                   <img
                     src={profilePhoto}
                     alt="Chandrasekhar - AI Engineer"
-                    className="w-full h-full object-cover object-center scale-105 hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover object-[center_10%] scale-125 hover:scale-130 transition-transform duration-700"
                   />
                 </div>
               </div>

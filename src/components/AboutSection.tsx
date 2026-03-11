@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Brain, Code, Zap } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/image-dp-latest.jpeg";
 
 const highlights = [
   { icon: Brain, label: "AI & ML Expert" },

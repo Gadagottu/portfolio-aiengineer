@@ -10,7 +10,7 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    role: "AI & ML Traninee",
+    role: "AI & ML Engineer",
     company: "Dhanush Softech",
     duration: "Sept 2025 - Present",
     description: "Built and contributed to multiple AI-driven platforms including KNCCI Internship Portal, Shangazi AI Learning System, and KEMIS Face Recognition System to enhance digital learning and institutional automation. Developed an AI-powered internship portal with intelligent student–organization matching and a personalized AI course generator for skill-based learning paths. Implemented a chatbot using Hugging Face Transformers for conversational assistance and designed an automated WhatsApp chatbot using n8n with tool-based workflows for autonomous query handling",

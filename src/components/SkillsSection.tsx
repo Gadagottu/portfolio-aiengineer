@@ -16,19 +16,7 @@ interface SkillCategory {
 }
 
 const skillCategories: SkillCategory[] = [
-  {
-    title: "Programming Languages & Frontend",
-    skills: [
-      { name: "Python", icon: Code2 },
-      { name: "JavaScript", icon: Terminal },
-      
-      { name: "SQL", icon: Database },
-      { name: "HTML/CSS", icon: Code2 },
-      { name: "React", icon: Code2 },
-      { name: "Angular", icon: Code2 },
-      { name: "Bootstrap", icon: Layers },
-    ],
-  },
+  
   {
     title: "AI & Machine Learning",
     skills: [
@@ -66,6 +54,7 @@ const skillCategories: SkillCategory[] = [
       { name: "MediaPipe", icon: Cpu },
     ],
   },
+  
   {
     title: "Backend & Deployment",
     skills: [
@@ -74,6 +63,19 @@ const skillCategories: SkillCategory[] = [
       { name: "PostgreSQL", icon: Database },
       { name: "MySQL", icon: Database },
       { name: "Oracle", icon: Database },
+    ],
+  },
+  {
+    title: "Programming Languages & Frontend",
+    skills: [
+      { name: "Python", icon: Code2 },
+      { name: "JavaScript", icon: Terminal },
+      
+      { name: "SQL", icon: Database },
+      { name: "HTML/CSS", icon: Code2 },
+      { name: "React", icon: Code2 },
+      { name: "Angular", icon: Code2 },
+      { name: "Bootstrap", icon: Layers },
     ],
   },
 ];

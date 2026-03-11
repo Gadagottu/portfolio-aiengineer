@@ -1,49 +1,64 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import deepfakeImage from "@/assets/deep-fake-project-image.jpeg";
+import ragImage from "@/assets/RAG-image.jpeg";
+import whatsappImage from "@/assets/whatsapp-image.jpeg";
+import recommendationsImage from "@/assets/recommendations.jpeg";
+import courseGeneratorImage from "@/assets/course-generator.jpeg";
+import resultManagementImage from "@/assets/result managent .png";
 
 interface Project {
   title: string;
   description: string;
   tech: string[];
   github: string;
+  image?: string;
 }
 
 const projects: Project[] = [
+  
   {
-    title: "WhatsApp AI Automation Bot",
-    description: "Intelligent automation bot for WhatsApp that handles customer queries, appointment scheduling, and CRM integration using LangChain.",
-    tech: ["Python", "LangChain", "n8n", "FastAPI", "PostgreSQL"],
+    title: "Deepfake Video Detection",
+    description: "RNN-based solution to detect and mitigate deepfake videos, contributing to cybersecurity and media authenticity with face detection and bounding box visualization.",
+    tech: ["TensorFlow", "OpenCV", "RNN", "Python", "Computer Vision"],
     github: "https://github.com/Gadagottu",
+    image: deepfakeImage,
   },
   {
     title: "AI Recommendation System",
     description: "Collaborative and content-based hybrid recommendation engine for e-commerce, delivering personalized product suggestions at scale.",
     tech: ["Python", "TensorFlow", "Redis", "Docker", "FastAPI"],
     github: "https://github.com/Gadagottu",
+    image: recommendationsImage,
   },
   {
     title: "RAG Chatbot",
     description: "Retrieval-Augmented Generation chatbot with vector-based document search, context-aware responses, and citation tracking.",
     tech: ["LangChain", "OpenAI", "Pinecone", "React", "FastAPI"],
     github: "https://github.com/Gadagottu",
+    image: ragImage,
   },
   {
-    title: "Deepfake Video Detection",
-    description: "RNN-based solution to detect and mitigate deepfake videos, contributing to cybersecurity and media authenticity with face detection and bounding box visualization.",
-    tech: ["TensorFlow", "OpenCV", "RNN", "Python", "Computer Vision"],
+    title: "WhatsApp AI Automation Bot",
+    description: "Intelligent automation bot for WhatsApp that handles customer queries, appointment scheduling, and CRM integration using LangChain.",
+    tech: ["Python", "LangChain", "n8n", "FastAPI", "PostgreSQL"],
     github: "https://github.com/Gadagottu",
+    image: whatsappImage,
   },
+  
   {
     title: "Result Management System",
     description: "User-friendly web application to streamline academic result management with CRUD features for student records, enhancing efficiency in result-related tasks.",
     tech: ["HTML", "CSS", "JavaScript", "FastAPI", "Python"],
     github: "https://github.com/Gadagottu",
+    image: resultManagementImage
   },
   {
     title: "Course Generator",
     description: "AI-powered course generation platform inspired by NotebookLM, automatically creating structured educational content from documents with interactive lessons and assessments.",
     tech: ["React", "TypeScript", "OpenAI", "LangChain", "FastAPI", "PostgreSQL"],
     github: "https://github.com/Gadagottu",
+    image: courseGeneratorImage,
   },
 ];
 
@@ -76,11 +91,19 @@ const ProjectsSection = () => {
             >
               <div>
                 <div className="w-full h-36 rounded-xl bg-secondary/50 mb-5 flex items-center justify-center overflow-hidden">
-                  <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="gradient-text font-heading font-bold text-xl">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <span className="gradient-text font-heading font-bold text-xl">
+                        {project.title.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{project.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
