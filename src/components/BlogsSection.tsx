@@ -10,10 +10,10 @@ interface Blog {
 
 const blogs: Blog[] = [
   {
-    title: "Real-Time Object Detection with React and TensorFlow.js",
-    preview: "A comprehensive guide to building real-time object detection applications using React and TensorFlow.js, covering model integration, camera access, and performance optimization.",
+    title: "AI Engineer OS: I Was Bored of Building Chatbots",
+    preview: "How I built a voice-first AI engineering platform with a dynamic agent factory, an MCP-based code engineer, and capability-based safety, guided by one rule: the model proposes, Python decides.",
     readTime: "8 min read",
-    link: "https://medium.com/@chandrasekhargadagottu/real-time-object-detection-with-react-and-tensorflow-js-ec279c44bc19",
+    link: "https://medium.com/@chandrasekhargadagottu/ai-engineer-os-i-was-bored-of-building-chatbots-7e069a679e13",
   },
   {
     title: "Text Summarization Tool Using T5-Small Model",

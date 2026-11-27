@@ -10,25 +10,32 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    role: "AI Engineer",
+    company: "Kriyo",
+    duration: "May 2026 - Present",
+    description: "Build production AI products for education and enterprise. Combine semantic retrieval and BM25 with Reciprocal Rank Fusion in hybrid RAG systems. Develop multi-tenant assistants for school enquiries and support, with isolated knowledge bases and tenant-level data isolation, plus WhatsApp integrations and ticketing workflows. Build real-time voice agents that combine speech recognition, conversational AI, and neural text-to-speech. Deploy services on AWS Lambda and with Docker, using MongoDB and S3 for storage.",
+    tech: ["Advanced RAG", "Agentic AI", "Hybrid Search", "BM25", "Reciprocal Rank Fusion", "Multi-Tenant AI", "Voice AI", "Real-Time Speech Processing", "OpenAI Realtime API", "Whisper", "Kokoro TTS", "AWS Lambda"],
+  },
+  {
     role: "AI & ML Engineer",
     company: "Dhanush Softech",
-    duration: "Sept 2025 - Present",
-    description: "Built and contributed to multiple AI-driven platforms including KNCCI Internship Portal, Shangazi AI Learning System, and KEMIS Face Recognition System to enhance digital learning and institutional automation. Developed an AI-powered internship portal with intelligent student–organization matching and a personalized AI course generator for skill-based learning paths. Implemented a chatbot using Hugging Face Transformers for conversational assistance and designed an automated WhatsApp chatbot using n8n with tool-based workflows for autonomous query handling",
-    tech: ["Python", "NLP", "Hugging Face", "n8n", "ML Pipelines", "Transformers", "Predictive Analytics"],
+    duration: "May 2025 - May 2026",
+    description: "Built student–organization matching with NLP embeddings for the KNCCI Internship Portal and developed AI course generation for personalized, skill-based learning paths in the Shangazi AI Learning System. Contributed to KEMIS Face Recognition for institutional automation. Built conversational assistants with Hugging Face Transformers and automated WhatsApp query handling with tool-based n8n workflows.",
+    tech: ["Python", "NLP Embeddings", "Semantic Matching", "AI Course Generation", "Hugging Face Transformers", "Chatbot Development", "Face Recognition", "n8n", "WhatsApp Automation"],
   },
   {
     role: "AI & ML Intern",
     company: "Dhanush Softech",
-    duration: "Jun 2025 – Sept 2025",
-    description: "Built an AI-powered internship portal with student-organization matching feature and AI course generator for personalized learning paths. Developed chatbot using Hugging Face Transformers and designed automated WhatsApp chatbot using n8n with tool-based workflows for autonomous query handling.",
-    tech: ["Python", "NLP", "Hugging Face", "n8n", "ML Pipelines", "Transformers", "Predictive Analytics"],
+    duration: "Feb 2025 - May 2025",
+    description: "Developed student–organization matching for an AI-powered internship portal and worked on a course generator that created personalized learning paths. Built a conversational chatbot with Hugging Face Transformers and designed tool-based n8n workflows to automate responses to WhatsApp queries.",
+    tech: ["Python", "Natural Language Processing", "Student–Organization Matching", "AI Course Generation", "Hugging Face Transformers", "Chatbot Development", "n8n", "WhatsApp Automation"],
   },
   {
     role: "Machine Learning Intern",
     company: "Bharat Intern",
-    duration: "Jan 2024 – Feb 2024",
-    description: "Built machine learning models for house price prediction and Iris classification using Python, TensorFlow, and scikit-learn. Developed end-to-end ML pipelines from preprocessing to deployment and implemented neural networks gaining foundational deep-learning experience.",
-    tech: ["Python", "TensorFlow", "scikit-learn", "Data Preprocessing", "Neural Networks", "ML Pipelines"],
+    duration: "Jan 2024 - Feb 2024",
+    description: "Built regression models to predict house prices and multiclass models to classify Iris flower species using Python, TensorFlow, and scikit-learn. Developed end-to-end machine learning pipelines covering data preprocessing, model training, and deployment, and implemented neural networks to build practical deep-learning experience.",
+    tech: ["Python", "TensorFlow", "scikit-learn", "Data Preprocessing", "Neural Networks", "ML Pipelines", "Regression", "Multiclass Classification"],
   },
 ];
 
@@ -54,7 +61,7 @@ const ExperienceSection = () => {
 
           {experiences.map((exp, i) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${exp.duration}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
